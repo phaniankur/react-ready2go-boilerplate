@@ -1,3 +1,3 @@
 clone and 
-**npm i **
+npm i
 on the terminal and you are good to go.
