@@ -1,14 +1,18 @@
 import React from 'react';
-//import { HashRouter as Router, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
+import Box from './Components/Library/Box';
+import theme from './Components/Library/theme';
+import Home from './Pages/Home';
 
 function App() {
   return (
-      // <Router>
-      //   <Route />
-      // </Router>
-      <h1 className='App'>Start Here</h1>
-
+    <ThemeProvider theme={theme}>
+      <Routes>
+          <Route exact path="/" element={<Home/>}/>
+        </Routes>
+    </ThemeProvider>
   );
 }
 
