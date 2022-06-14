@@ -1,21 +1,37 @@
 import React from 'react'
 import Box from '../Components/Library/Box'
+import Navbar from '../Components/Navbar/Index'
+import SinglePost from '../Components/SinglePost/SinglePost'
+import UserInfo from '../Components/UserInfoSidebar/UserInfo'
 
 function Home() {
   return (
-    <Box
-    bg='inputBlue'
-    width = '100%'
-    height = '100vh'
-    display= 'flex'
-    justifyContent = 'center'
-    alignItems = 'center'
-    fontSize = '2rem'
-    flexDirection = 'column'
+    <Navbar
+    bg='bgPrimary'
+    Heading = 'My Journal'
     >
-      <Box>You may start here.</Box>
-      <Box>Bon Voyage!✌</Box>
+
+    <Box
+    display='flex'
+    justifyContent='space-between'
+    pl='2rem'
+    pr='2rem'
+    mt='2rem'
+    gap='1rem'
+    >
+      <Box
+      width='60%'
+      >
+        <SinglePost/>
+      </Box>
+      <Box
+        width='40%'
+        // bg='red'
+      >
+        <UserInfo/>
+      </Box>
     </Box>
+    </Navbar>
   )
 }
 
